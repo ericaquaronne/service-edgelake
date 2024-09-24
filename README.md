@@ -1,11 +1,18 @@
 # EdgeLake Service for  OpenHorizon
 
-EdgeLake is a decentralized network to manage IoT data. Nodes in the network are compute instances that execute the EdgeLake 
-Software. Joining a network requires the following steps:
+EdgeLake is a decentralized network to manage IoT data: it provides a Data service spanning all the nodes in a network and allows a user to view all the nodes data as a single large data service or database but it is not centralized at all : data stays at the Edges nodes until needed. 
+To allow for such a data service, all the meta data are stored in a blockchain service or a master node, in the following we will assume usage of a Master node (ref the EdgeLake of Anylog pages for more details). This shared meta data layer allows for very simple EdgeLake nodes setup : no need to send a DB expert to prepare Edge databases.
+
+Open Horizon allows for a very efficient and secure Edge management but what are Edges for if not exploiting their data ?  and how to better deploy the Edgelake data service software to Nodes if not with Open Horizon ? You can clearly see the common value
+
+In the following we will cover how to deploy EdgeLake functions in the context of an Open Horizon Egdes setup
+
+Nodes are compute instances that execute the EdgeLake software, and that are part of one network.
+Joining a network requires the following steps:
 1. Install the EdgeLake Software on one or more computer instances.
 2. Configure each installed node (compute instance) such that:
-   1. The node joins an exiting network (or creates a new network).
-   2. The node offers data management and monitoring services.  
+   1. The node joins an exiting network (or creates a new network), exchanging with the Master Node
+   2. The node offers data management and monitoring services to users that want to query the data, exchanging with a Query node (nota: there can be as many Query nodes as pleases you, but we will describe here using one).  
 
 
 **Table of Content**:
